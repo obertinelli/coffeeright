@@ -1,0 +1,130 @@
+body {
+    background-color: #FDC38A;
+    color: #461F1F;
+}
+
+.homeimage {
+    background-image: url(images/coffee.png);
+    height: 300px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top; 
+    rotate: 180deg;
+}
+
+nav {
+    background-color: #461F1F;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    color: #D9661F;
+    text-align: center;
+    padding: 0px 36px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: fantasy;
+    height: 60px;
+ }
+
+ .navimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 325px;
+    height: 60px;
+    margin-bottom: 0;
+ }
+
+ nav a:hover {
+    background-color: none;
+    color: #ddd;
+ }
+
+ .active {
+    background-color: none;
+    color: white;
+ }
+
+ .active:hover {
+    background-color: none;
+    color: #FDC38A;
+ }
+
+ .welcometxt {
+    color: #D9661F;
+    font-size: 100px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+ }
+
+ .marker {
+    color: #D9661F;
+    font-size: 20px;
+    margin-left: 10px;
+ }
+
+ .box {
+    color: #D9661F;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -5px;
+ }
+
+ .headertxt {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 50px;
+ }
+
+ .categories {
+    list-style-type: none;
+    background-color: none;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: fantasy;
+ }
+
+ ul li{
+  display: inline;
+  text-decoration: none;
+}
+
+.menu_btn_one {
+    border: 1px solid #461F1F;
+    background-color: #FDC38A;
+    color: #461F1F;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 100px;
+    cursor: pointer;
+    width: 300px;
+}
+
+.menu_btn_one:hover {
+    background-color: #D9661F;
+    color: #ddd;
+}
+
+hr {
+    height: 2px;
+    width: 1700px;
+    border-width: 0;
+    color: #461F1F;
+    background-color: #461F1F;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
