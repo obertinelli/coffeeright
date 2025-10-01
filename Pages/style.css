@@ -109,9 +109,9 @@ nav a {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    margin-left: 100px;
+    margin-left: 200px;
     cursor: pointer;
-    width: 300px;
+    width: 330px;
 }
 
 .menu_btn_one:hover {
@@ -127,4 +127,109 @@ hr {
     background-color: #461F1F;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.menuitems {
+   display: inline;
+   margin-left: 50px;
+}
+
+footer {
+   color: #ddd;
+   background-color: #461F1F;
+   height: 200px;
+   align-content: center;
+   text-align: center;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.inlineitems {
+   display: inline;
+}
+
+.container {
+  display: inline-grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "price price";
+  grid-template-columns: 350px 200px;
+  gap: 5px;
+  background-color: #461F1F;
+  color: #D9661F;
+  text-shadow: 3px 2px #1f0b0b;
+  font-size: larger;
+  padding: 5px;
+  margin-left: none;
+}
+.container > div {
+  background-color: #461F1F;
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container > div.menu {
+  grid-area: menu;
+  width: 535px;
+  background-color: #FDC38A;
+}
+.container > div.price {
+  grid-area: price;
+}
+
+.foodimg1 {
+   width: 400px;
+   margin-left: 50px;
+}
+
+.foodimg2 {
+   width: 318px;
+   margin-left: 125px;
+}
+
+.add_to_cart_btn {
+    background-color: #D9661F;
+    color: #461F1F;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.add_to_cart_btn:hover {
+   color: #ddd;
+}
+
+h4 {
+   display: inline;
+   margin-left: 25px;
+   margin-right: 255px;
+}
+
+.shoppingdiv {
+   background-color: #461F1F;
+   margin-bottom: 100px;
+}
+
+.cartSummary {
+   color: #D9661F;
+   font-size: 50px;
+   font-weight: bold;
+   text-align: right;
+   padding-right: 500px;
+}
+
+.placeText {
+   margin-top: 15px;
+   margin-left: 55px;
+   font-size: 25px;
+   font-weight: bold;
 }
