@@ -1,69 +1,67 @@
 <!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CofeeRight</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>CoffeeRight</title>
 </head>
 
+<body>
 <nav>
-    <a href="home.html"><img class="navimg" src="images/CoffeeRight Logo.png" alt="logo"></a>
-    <a href="home.html" class="active">Menu</a>
-    <a href="about.html">About Us</a>
-    <a href="cart.html">Shopping Cart</a>
+    <a href="{% url 'home' %}">
+        <img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="logo">
+    </a>
+    <a href="{% url 'home' %}" class="active">Menu</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'cart' %}">Shopping Cart</a>
 </nav>
 
-<div class="homeimage">
+<div class="homeimage"></div>
+
+<div class="welcometxt">Welcome!</div>
+
+<ul class="marker">
+    <li class="box">||||||||||||||||||||||||||||||||</li>
+    <li>Categories</li>
+</ul>
+
+<div class="headertxt">Browse by Category</div>
+
+<ul class="categories">
+    <li><button class="menu_btn_one" onclick="location.href='{% url 'hot_menu' %}'">Hot Drinks</button></li>
+    <li><button class="menu_btn_one" onclick="location.href='{% url 'cold_menu' %}'">Cold Drinks</button></li>
+    <li><button class="menu_btn_one" onclick="location.href='{% url 'food_menu' %}'">Food</button></li>
+</ul>
+
+<hr>
+
+<ul class="marker">
+    <li class="box">||||||||||||||||||||||||||||||||</li>
+    <li>This Month</li>
+</ul>
+
+<div class="headertxt">Best Sellers:</div>
+
+<div class="menuitems">
+    {% for item in items %}
+        <div class="container">
+            <div class="header"><h2>{{ item.name }}</h2></div>
+            <div class="menu"><img src="{% static 'images/default.png' %}" alt="{{ item.name }}"></div>
+            <div class="price">
+                <h4>Price: ${{ item.price }}</h4>
+                <button class="add_to_cart_btn">Add Item</button>
+            </div>
+        </div>
+    {% endfor %}
 </div>
 
-<body>
-    <div class="welcometxt">Welcome!</div>
-
-    <ul class="marker">
-        <li class="box">||||||||||||||||||||||||||||||||</li>
-        <li>Categories</li>
-    </ul>
-
-    <div class="headertxt">Browse by Category</div>
-
-    <ul class="categories">
-        <li><button class="menu_btn_one" onclick="document.location='hot_drinks.html'">Hot Drinks</button></li>
-        <li><button class="menu_btn_one" onclick="document.location='cold_drinks.html'">Cold Drinks</button></li>
-        <li><button class="menu_btn_one" onclick="document.location='food.html'" >Food</button></li>
-    </ul>
-
-    <hr>
-
-    <ul class="marker">
-        <li class="box">||||||||||||||||||||||||||||||||</li>
-        <li>This Month</li>
-    </ul>
-
-    <div class="headertxt">Best Sellers:</div>
-    <div class="menuitems">
-    <div class="inlineitems"><div class="container">
-        <div class="header"><h2>Bacon Egg & Cheese Bagel</h2></div>
-        <div class="menu"><img src="images/becbagel.png" alt="Bacon Egg & Cheese Bagel" class="foodimg1"></div>
-        <div class="price"><h4>Price: $7.99</h4><button class="add_to_cart_btn">Add Item</button></div>
-    </div>
-    <div class="container">
-        <div class="header"><h2>Mocha Frappichino</h2></div>
-        <div class="menu"><img src="images/mochaFrappe.png" alt="Mocha Frappichino" class="foodimg2"></div>
-        <div class="price"><h4>Price: $8.99</h4><button class="add_to_cart_btn">Add Item</button></div>
-    </div>
-    <div class="container">
-        <div class="header"><h2>Hot Latte</h2></div>
-        <div class="menu"><img src="images/latte.png" alt="Latte" class="foodimg1"></div>
-        <div class="price"><h4>Price: $3.99</h4><button class="add_to_cart_btn">Add Item</button></div>
-    </div></div>
-    </div><br><br>
-
-
-    <footer>
-        <h3>Contact Us:</h3>
-        <p><i>Email: CoffeeRight@example.com</i></p>
-        <p><b>555-555-5555</b></p>
-    </footer>
+<footer>
+    <h3>Contact Us:</h3>
+    <p><i>Email: CoffeeRight@example.com</i></p>
+    <p><b>555-555-5555</b></p>
+</footer>
 </body>
 </html>

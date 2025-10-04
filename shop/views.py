@@ -8,18 +8,18 @@ def home(request):
 
 
 def hotmenu(request):
-    items = MenuItem.objects.all()
-    return render(request, "shop/hotmenu.html", {"items": items})
+    items = MenuItem.objects.filter(category__name="Hot Drinks")
+    return render(request, "shop/hot_drinks.html", {"items": items})
 
 
 def coldmenu(request):
-    items = MenuItem.objects.all()
-    return render(request, "shop/coldmenu.html", {"items": items})
+    items = MenuItem.objects.filter(category__name="Cold Drinks")
+    return render(request, "shop/cold_drinks.html", {"items": items})
 
 
 def foodmenu(request):
-    items = MenuItem.objects.all()
-    return render(request, "shop/foodmenu.html", {"items": items})
+    items = MenuItem.objects.filter(category__name="Food")
+    return render(request, "shop/food.html", {"items": items})
 
 
 def about(request):
