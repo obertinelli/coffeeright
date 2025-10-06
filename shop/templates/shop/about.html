@@ -1,23 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>CofeeRight</title>
+    <title>CoffeeRight</title>
 </head>
-
-<nav>
-    <a href="home.html"><img class="navimg" src="images/CoffeeRight Logo.png" alt="logo"></a>
-    <a href="home.html">Menu</a>
-    <a href="about.html" class="active">About Us</a>
-    <a href="cart.html">Shopping Cart</a>
-</nav>
+<body>
+    <nav>
+        <a href="{% url 'home' %}"><img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="logo"></a>
+        <a href="{% url 'home' %}">Menu</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'cart' %}">Shopping Cart</a>
+    </nav>
 
 <div class="homeimage">
 </div>
 
-<body>
     <div class="welcometxt">About Us!</div>
 
     <ul class="marker">

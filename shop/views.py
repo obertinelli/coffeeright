@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Category, MenuItem
+from .models import Category, MenuItem, Order
 
 
 def home(request):
@@ -27,4 +27,12 @@ def about(request):
 
 
 def cart(request):
-    return render(request, "shop/cart.html")
+    try:
+        order = Order.objects.latest('created_at')
+        items = order.items.all()
+        total = sum(item.price for item in items)
+    except Order.DoesNotExist:
+        items = []
+        total = 0
+
+    return render(request, "shop/cart.html", {"items": items, "total": total})

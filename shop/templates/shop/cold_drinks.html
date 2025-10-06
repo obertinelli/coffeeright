@@ -1,23 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CofeeRight</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>CoffeeRight</title>
 </head>
-
+<body>
 <nav>
-    <a href="home.html"><img class="navimg" src="images/CoffeeRight Logo.png" alt="logo"></a>
-    <a href="home.html">Menu</a>
-    <a href="about.html">About Us</a>
-    <a href="cart.html">Shopping Cart</a>
-</nav>
+    <nav>
+        <a href="{% url 'home' %}"><img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="logo"></a>
+        <a href="{% url 'home' %}">Menu</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'cart' %}">Shopping Cart</a>
+    </nav>
 
 <div class="homeimage">
 </div>
 
-<body>
     <div class="welcometxt">Cold Drinks</div>
 
     <ul class="marker">
@@ -28,9 +29,9 @@
     <div class="headertxt">Browse by Category</div>
 
     <ul class="categories">
-        <li><button class="menu_btn_one" onclick="document.location='hot_drinks.html'">Hot Drinks</button></li>
-        <li><button class="menu_btn_one" onclick="document.location='cold_drinks.html'">Cold Drinks</button></li>
-        <li><button class="menu_btn_one" onclick="document.location='food.html'" >Food</button></li>
+        <li><button class="menu_btn_one" onclick="location.href='{% url 'hot_drinks' %}'">Hot Drinks</button></li>
+        <li><button class="menu_btn_one" onclick="location.href='{% url 'cold_drinks' %}'">Cold Drinks</button></li>
+        <li><button class="menu_btn_one" onclick="location.href='{% url 'food' %}'">Food</button></li>
     </ul>
 
     <hr>
