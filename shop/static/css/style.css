@@ -4,7 +4,7 @@ body {
 }
 
 .homeimage {
-    background-image: url(images/coffee.png);
+    background-image: url(../images/coffee.png);
     height: 300px;
     background-position: top;
     background-repeat: no-repeat;
