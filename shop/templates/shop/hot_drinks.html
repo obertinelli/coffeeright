@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>CoffeeRight</title>
+    <title>CoffeeRight - Hot Drinks</title>
 </head>
 
 <body>
     <nav>
-        <a href="{% url 'home' %}"><img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="logo"></a>
+        <a href="{% url 'home' %}">
+            <img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="CoffeeRight Logo">
+        </a>
         <a href="{% url 'home' %}">Menu</a>
         <a href="{% url 'about' %}">About Us</a>
         <a href="{% url 'cart' %}">Shopping Cart</a>
     </nav>
 
-<div class="homeimage">
-</div>
+    <div class="homeimage"></div>
 
     <div class="welcometxt">Hot Drinks</div>
 
@@ -42,29 +43,74 @@
     </ul>
 
     <div class="headertxt">Hot Drinks:</div>
-     <div class="menuitems">
-    <div class="inlineitems"><div class="container">
-        <div class="header"><h2>Hot Latte</h2></div>
-        <div class="menu"><img src="{% static 'images/latte.png' %}" alt="Latte" class="foodimg1"></div>
-        <div class="price"><h4>Price: $3.99</h4><button class="add_to_cart_btn">Add Item</button></div>
-    </div>
-    <div class="container">
-        <div class="header"><h2>Mocha Latte</h2></div>
-        <div class="menu"><img src="{% static 'images/mochaLatte.png' %}" alt="Mocha Latte" class="foodimg1"></div>
-        <div class="price"><h4>Price: $4.99</h4><button class="add_to_cart_btn">Add Item</button></div>
-    </div>
-    <div class="container">
-        <div class="header"><h2>Vanilla Latte</h2></div>
-        <div class="menu"><img src="{% static 'images/vanillaLatte.webp' %}" alt="Vanilla Latte" class="foodimg1"></div>
-        <div class="price"><h4>Price: $4.99</h4><button class="add_to_cart_btn">Add Item</button></div>
-    </div></div>
-    </div><br><br>
 
+    <div class="menuitems">
+        <div class="inlineitems">
+
+            <div class="container">
+                <div class="header"><h2>Hot Latte</h2></div>
+                <div class="menu">
+                    <img src="{% static 'images/latte.png' %}" alt="Hot Latte" class="foodimg1">
+                </div>
+                <div class="price">
+                    <h4>Price: $3.99</h4>
+                    <button class="add_to_cart_btn" onclick="addToCart('Hot Latte', 3.99)">Add Item</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="header"><h2>Mocha Latte</h2></div>
+                <div class="menu">
+                    <img src="{% static 'images/mochaLatte.png' %}" alt="Mocha Latte" class="foodimg1">
+                </div>
+                <div class="price">
+                    <h4>Price: $4.99</h4>
+                    <button class="add_to_cart_btn" onclick="addToCart('Mocha Latte', 4.99)">Add Item</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="header"><h2>Vanilla Latte</h2></div>
+                <div class="menu">
+                    <img src="{% static 'images/vanillaLatte.webp' %}" alt="Vanilla Latte" class="foodimg1">
+                </div>
+                <div class="price">
+                    <h4>Price: $4.99</h4>
+                    <button class="add_to_cart_btn" onclick="addToCart('Vanilla Latte', 4.99)">Add Item</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br><br>
 
     <footer>
         <h3>Contact Us:</h3>
         <p><i>Email: CoffeeRight@example.com</i></p>
         <p><b>555-555-5555</b></p>
     </footer>
+
+    <script>
+        function addToCart(name, price) {
+            // Retrieve existing cart from localStorage or start new
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if item already exists
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name: name, price: price, quantity: 1 });
+            }
+
+            // Save updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Notify user
+            alert(`${name} has been added to your cart!`);
+        }
+    </script>
+
 </body>
 </html>

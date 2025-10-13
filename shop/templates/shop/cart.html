@@ -19,28 +19,16 @@
     <div class="homeimage"></div>
 
     <div class="shoppingdiv">
-        <div class="cart-items">
-            <h2>Your Cart</h2>
-            {% if items %}
-                <ul>
-                    {% for item in items %}
-                        <li>{{ item.name }} - ${{ item.price }}</li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>Your cart is empty.</p>
-            {% endif %}
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-container">
+            <p>Loading your cart...</p>
         </div>
 
-        <div class="cartSummary">
-            <h3>Summary:</h3>
-            {% if items %}
-                <p>Total: ${{ total }}</p>
-            {% else %}
-                <p>Total: $0.00</p>
-            {% endif %}
-        </div>
+        <div class="cartSummary" id="cart-summary"></div>
 
+        <div class="cart-buttons">
+            <button id="clear-cart" style="margin-top: 15px;">Clear Cart</button>
+        </div>
     </div>
 
     <footer>
@@ -48,6 +36,61 @@
         <p><i>Email: CoffeeRight@example.com</i></p>
         <p><b>555-555-5555</b></p>
     </footer>
+
+    <script>
+        function loadCart() {
+            const cartContainer = document.getElementById('cart-container');
+            const cartSummary = document.getElementById('cart-summary');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+                cartSummary.innerHTML = "<p><strong>Total:</strong> $0.00</p>";
+                return;
+            }
+
+            let total = 0;
+            let html = "<ul>";
+
+            cart.forEach((item, index) => {
+                const itemTotal = (item.price * item.quantity).toFixed(2);
+                total += item.price * item.quantity;
+
+                html += `
+                    <li>
+                        <strong>${item.name}</strong> - $${item.price.toFixed(2)} × ${item.quantity} = $${itemTotal}
+                        <button class="remove-btn" data-index="${index}" style="margin-left:10px;">Remove</button>
+                    </li>
+                `;
+            });
+
+            html += "</ul>";
+            cartContainer.innerHTML = html;
+            cartSummary.innerHTML = `<p><strong>Total:</strong> $${total.toFixed(2)}</p>`;
+
+            // remove button functionality
+            document.querySelectorAll('.remove-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    removeItem(index);
+                });
+            });
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        document.getElementById('clear-cart').addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            loadCart();
+        });
+
+        window.addEventListener('load', loadCart);
+    </script>
 
 </body>
 </html>

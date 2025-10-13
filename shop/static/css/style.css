@@ -233,3 +233,15 @@ h4 {
    font-size: 25px;
    font-weight: bold;
 }
+
+.cart-container {
+	color: white;
+	position: relative;
+    z-index: 999;
+}
+
+.cart-container li,
+.cart-container h2,
+.cart-container p {
+    color: #fff;
+}
