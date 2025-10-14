@@ -13,21 +13,21 @@
         <a href="{% url 'home' %}"><img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="logo"></a>
         <a href="{% url 'home' %}">Menu</a>
         <a href="{% url 'about' %}">About Us</a>
-        <a href="{% url 'cart' %}">Shopping Cart</a>
+        <a href="{% url 'cart' %}" class="active">Shopping Cart</a>
     </nav>
 
     <div class="homeimage"></div>
 
     <div class="shoppingdiv">
         <h2>Your Shopping Cart</h2>
-        <div id="cart-container">
+        <div id="cart-container" class="cart-container">
             <p>Loading your cart...</p>
         </div>
 
         <div class="cartSummary" id="cart-summary"></div>
 
         <div class="cart-buttons">
-            <button id="clear-cart" style="margin-top: 15px;">Clear Cart</button>
+            <button id="clear-cart" class="clear-cart" style="margin-top: 15px;">Clear Cart</button>
         </div>
     </div>
 
