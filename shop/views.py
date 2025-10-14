@@ -2,31 +2,31 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Category, MenuItem
 
 
-def home(request):
+def home(request):  # makes homepage load
     categories = Category.objects.all()
     return render(request, "shop/home.html", {"categories": categories})
 
 
-def hotmenu(request):
+def hotmenu(request):  # makes hot drink menu page load
     items = MenuItem.objects.filter(category__name="Hot Drinks")
     return render(request, "shop/hot_drinks.html", {"items": items})
 
 
-def coldmenu(request):
+def coldmenu(request):  # makes cold drink menu page load
     items = MenuItem.objects.filter(category__name="Cold Drinks")
     return render(request, "shop/cold_drinks.html", {"items": items})
 
 
-def foodmenu(request):
+def foodmenu(request):  # makes food menu load
     items = MenuItem.objects.filter(category__name="Food")
     return render(request, "shop/food.html", {"items": items})
 
 
-def about(request):
+def about(request):  # makes about page load
     return render(request, "shop/about.html")
 
 
-def add_to_cart(request, item_id):
+def add_to_cart(request, item_id):  # function for the cart
     item = get_object_or_404(MenuItem, id=item_id)
     order, created = Order.objects.get_or_create(is_complete=False)
     order.items.add(item)

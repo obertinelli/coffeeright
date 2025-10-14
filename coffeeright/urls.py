@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from shop import views
-
+# this file includes the urls for each page as well as the cart functions
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
