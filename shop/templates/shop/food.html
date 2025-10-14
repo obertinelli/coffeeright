@@ -3,79 +3,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>CoffeeRight - Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets page to device width -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Links page to CSS sheet -->
+    <title>CoffeeRight - Food</title> <!-- page title -->
 </head>
+
 <body>
     <nav>
-        <a href="{% url 'home' %}">
-            <img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="CoffeeRight Logo">
+        <a href="{% url 'home' %}"> <!-- Div for top navigation menu, shows all buttons and highlights active tab -->
+            <img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="CoffeeRight Logo"><!-- shows logo in navbar -->
         </a>
-        <a href="{% url 'home' %}">Menu</a>
-        <a href="{% url 'about' %}">About Us</a>
-        <a href="{% url 'cart' %}">Shopping Cart</a>
+        <a href="{% url 'home' %}">Menu</a> <!-- nav choice -->
+        <a href="{% url 'about' %}">About Us</a> <!-- nav choice -->
+        <a href="{% url 'cart' %}">Shopping Cart</a> <!-- nav choice -->
     </nav>
 
-    <div class="homeimage"></div>
+    <div class="homeimage"></div> <!-- div allows for the coffee bean image to be displayed in CSS -->
 
-    <div class="welcometxt">Food</div>
+    <div class="welcometxt">Food</div> <!-- Text header -->
 
-    <ul class="marker">
-        <li class="box">||||||||||||||||||||||||||||||||</li>
-        <li>Categories</li>
+    <ul class="marker"> <!-- aesthetic orange subcategory header -->
+        <li class="box">||||||||||||||||||||||||||||||||</li> <!-- orange box text -->
+        <li>Categories</li> <!-- subheader text -->
     </ul>
 
-    <div class="headertxt">Browse by Category</div>
+    <div class="headertxt">Browse by Category</div> <!-- page menu nav header -->
 
-    <ul class="categories">
-        <li><button class="menu_btn_one" onclick="location.href='{% url 'hot_drinks' %}'">Hot Drinks</button></li>
-        <li><button class="menu_btn_one" onclick="location.href='{% url 'cold_drinks' %}'">Cold Drinks</button></li>
-        <li><button class="menu_btn_one" onclick="location.href='{% url 'food' %}'">Food</button></li>
+    <ul class="categories"> <!-- navigation to each item page -->
+        <li><button class="menu_btn_one" onclick="location.href='{% url 'hot_drinks' %}'">Hot Drinks</button></li> <!-- hot drinks menu page button -->
+        <li><button class="menu_btn_one" onclick="location.href='{% url 'cold_drinks' %}'">Cold Drinks</button></li> <!-- cold drinks menu page button -->
+        <li><button class="menu_btn_one" onclick="location.href='{% url 'food' %}'">Food</button></li> <!-- food menu page button -->
     </ul>
 
     <hr>
 
-    <ul class="marker">
-        <li class="box">||||||||||||||||||||||||||||||||</li>
-        <li>Foods</li>
+    <ul class="marker"> <!-- aesthetic orange subcategory header -->
+        <li class="box">||||||||||||||||||||||||||||||||</li> <!-- orange box text -->
+        <li>Foods</li> <!-- subheader text -->
     </ul>
 
-    <div class="headertxt">Fresh Food:</div>
+    <div class="headertxt">Fresh Food:</div> <!-- text header -->
 
-    <div class="menuitems">
-        <div class="inlineitems">
+    <div class="menuitems"> <!-- div for menu items to appear -->
+        <div class="inlineitems"> <!-- div to format items -->
 
-            <div class="container">
-                <div class="header"><h2>Bacon Egg & Cheese Bagel</h2></div>
-                <div class="menu">
-                    <img src="{% static 'images/becbagel.png' %}" alt="Bacon Egg & Cheese Bagel" class="foodimg1">
+            <div class="container"> <!-- contains individual item for formatting -->
+                <div class="header"><h2>Bacon Egg & Cheese Bagel</h2></div> <!-- item name -->
+                <div class="menu"> <!--div for formatting image placement  -->
+                    <img src="{% static 'images/becbagel.png' %}" alt="Bacon Egg & Cheese Bagel" class="foodimg1"> <!-- shows item image -->
                 </div>
-                <div class="price">
-                    <h4>Price: $7.99</h4>
-                    <button class="add_to_cart_btn" onclick="addToCart('Bacon Egg & Cheese Bagel', 7.99)">Add Item</button>
+                <div class="price"> <!-- div for price and add to cart button formatting -->
+                    <h4>Price: $7.99</h4> <!-- price text -->
+                    <button class="add_to_cart_btn" onclick="addToCart('Bacon Egg & Cheese Bagel', 7.99)">Add Item</button> <!-- add to cart button -->
                 </div>
             </div>
 
-            <div class="container">
-                <div class="header"><h2>Coffee Cake</h2></div>
-                <div class="menu">
-                    <img src="{% static 'images/coffeeCake.png' %}" alt="Coffee Cake" class="foodimg1">
+            <div class="container"><!-- contains individual item for formatting -->
+                <div class="header"><h2>Coffee Cake</h2></div> <!-- item name -->
+                <div class="menu"> <!--div for formatting image placement  -->
+                    <img src="{% static 'images/coffeeCake.png' %}" alt="Coffee Cake" class="foodimg1"> <!-- shows item image -->
                 </div>
-                <div class="price">
-                    <h4>Price: $5.99</h4>
-                    <button class="add_to_cart_btn" onclick="addToCart('Coffee Cake', 5.99)">Add Item</button>
+                <div class="price"> <!-- div for price and add to cart button formatting -->
+                    <h4>Price: $5.99</h4> <!-- price text -->
+                    <button class="add_to_cart_btn" onclick="addToCart('Coffee Cake', 5.99)">Add Item</button> <!-- add to cart button -->
                 </div>
             </div>
 
-            <div class="container">
-                <div class="header"><h2>Chocolate Cupcake</h2></div>
-                <div class="menu">
-                    <img src="{% static 'images/chocolateCupcake.png' %}" alt="Chocolate Cupcake" class="foodimg1">
+            <div class="container"><!-- contains individual item for formatting -->
+                <div class="header"><h2>Chocolate Cupcake</h2></div> <!-- item name -->
+                <div class="menu"> <!--div for formatting image placement  -->
+                    <img src="{% static 'images/chocolateCupcake.png' %}" alt="Chocolate Cupcake" class="foodimg1"> <!-- shows item image -->
                 </div>
-                <div class="price">
-                    <h4>Price: $7.99</h4>
-                    <button class="add_to_cart_btn" onclick="addToCart('Chocolate Cupcake', 7.99)">Add Item</button>
+                <div class="price"> <!-- div for price and add to cart button formatting -->
+                    <h4>Price: $7.99</h4> <!-- price text -->
+                    <button class="add_to_cart_btn" onclick="addToCart('Chocolate Cupcake', 7.99)">Add Item</button> <!-- add to cart button -->
                 </div>
             </div>
 
@@ -84,7 +85,7 @@
 
     <br><br>
 
-    <footer>
+    <footer> <!-- bottom page contact info banner -->
         <h3>Contact Us:</h3>
         <p><i>Email: CoffeeRight@example.com</i></p>
         <p><b>555-555-5555</b></p>

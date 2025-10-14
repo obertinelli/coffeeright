@@ -1,8 +1,10 @@
+/* Base format applied to every page unless otherwise specified */
 body {
     background-color: #FDC38A;
     color: #461F1F;
 }
 
+/* Displays main coffee image */
 .homeimage {
     background-image: url(../images/coffee.png);
     height: 300px;
@@ -14,11 +16,13 @@ body {
     rotate: 180deg;
 }
 
+/* Top navigation menu display */
 nav {
     background-color: #461F1F;
     overflow: hidden;
 }
 
+/* Navigation menu button formatting */
 nav a {
     float: left;
     color: #D9661F;
@@ -32,6 +36,7 @@ nav a {
     height: 60px;
  }
 
+ /* CoffeeRight logo formatting */
  .navimg {
     display: block;
     margin-left: auto;
@@ -41,11 +46,13 @@ nav a {
     margin-bottom: 0;
  }
 
+ /* Navigation button hover formatting */
  nav a:hover {
     background-color: none;
     color: #ddd;
  }
 
+ /* Navigation active page class */
  .active {
     background-color: none;
     color: white;
@@ -56,6 +63,7 @@ nav a {
     color: #FDC38A;
  }
 
+ /* Main page header text format */
  .welcometxt {
     color: #D9661F;
     font-size: 100px;
@@ -65,12 +73,14 @@ nav a {
     margin-bottom: 20px;
  }
 
+ /* Orange aesthetic subcategory formatting */
  .marker {
     color: #D9661F;
     font-size: 20px;
     margin-left: 10px;
  }
 
+ /* Orange box - code looks ugly but it works */
  .box {
     color: #D9661F;
     font-size: 25px;
@@ -78,6 +88,7 @@ nav a {
     letter-spacing: -5px;
  }
 
+ /* Larger category text formatting */
  .headertxt {
     font-size: 50px;
     font-weight: bolder;
@@ -85,6 +96,7 @@ nav a {
     margin-left: 50px;
  }
 
+ /* Formats menu page navigation buttons in a row */
  .categories {
     list-style-type: none;
     background-color: none;
@@ -94,11 +106,13 @@ nav a {
     font-family: fantasy;
  }
 
+ /* Encompassed by above */
  ul li{
   display: inline;
   text-decoration: none;
 }
 
+/* Displays and formats menu page navigation buttons */
 .menu_btn_one {
     border: 1px solid #461F1F;
     background-color: #FDC38A;
@@ -114,11 +128,13 @@ nav a {
     width: 330px;
 }
 
+ /* Encompassed by above */
 .menu_btn_one:hover {
     background-color: #D9661F;
     color: #ddd;
 }
 
+/* Formats page line break */
 hr {
     height: 2px;
     width: 1700px;
@@ -129,11 +145,13 @@ hr {
     margin-bottom: 50px;
 }
 
+/* Formatting of menu items to display in line */
 .menuitems {
    display: inline;
    margin-left: 50px;
 }
 
+/* Footer banner formatting for each page */
 footer {
    color: #ddd;
    background-color: #461F1F;
@@ -144,10 +162,12 @@ footer {
    font-weight: bold;
 }
 
+/* Setting menu page items to be formatted in line */
 .inlineitems {
    display: inline;
 }
 
+/* Setting the menu page items as a grid to allow placement for each item/information aesthetically (all uncommented sections below are encompassed by this comment) */
 .container {
   display: inline-grid;
   grid-template-areas:
@@ -163,33 +183,44 @@ footer {
   padding: 5px;
   margin-left: none;
 }
+
+ /* Encompassed by above */
 .container > div {
   background-color: #461F1F;
   padding: 10px;
 }
+
+ /* Encompassed by above */
 .container > div.header {
   grid-area: header;
   text-align: center;
 }
+
+ /* Encompassed by above */
 .container > div.menu {
   grid-area: menu;
   width: 535px;
   background-color: #FDC38A;
 }
+
+ /* Encompassed by above */
 .container > div.price {
   grid-area: price;
 }
 
+ /* Encompassed by above */
 .foodimg1 {
    width: 400px;
    margin-left: 50px;
 }
 
+ /* Encompassed by above */
 .foodimg2 {
    width: 318px;
    margin-left: 125px;
 }
 
+ /* Encompassed by above */
 .add_to_cart_btn {
     background-color: #D9661F;
     color: #461F1F;
@@ -204,16 +235,19 @@ footer {
     width: 150px;
 }
 
+ /* Encompassed by above */
 .add_to_cart_btn:hover {
    color: #ddd;
 }
 
+ /* Encompassed by above */
 h4 {
    display: inline;
    margin-left: 20px;
    margin-right: 255px;
 }
 
+/* Formatting for the shopping cart summary banner display */
 .shoppingdiv {
    background-color: #461F1F;
    margin-bottom: 100px;
@@ -223,10 +257,12 @@ h4 {
    padding-top: 20px;
 }
 
+/* Text formatting for above */
 .shoppingdiv h2 {
    margin-left: 30px;
 }
 
+/* Formatting for cart total price display */
 .cartSummary {
    color: #ddd;
    font-size: 40px;
@@ -235,6 +271,7 @@ h4 {
    margin-left: 100px;
 }
 
+/* Text formatting for above */
 .placeText {
    margin-top: 15px;
    margin-left: 55px;
@@ -242,6 +279,7 @@ h4 {
    font-weight: bold;
 }
 
+/* Formatting for items added to cart to display aesthetically an inline (uncommented sections below are encompassed by this comment) */
 .cart-container {
    display: block;
    width: 1000px;
@@ -250,14 +288,17 @@ h4 {
     z-index: 999;
 }
 
+ /* Encompassed by above */
 .cart-container p {
    margin-left: 50px;
 }
 
+ /* Encompassed by above */
 .cart-container li {
    display: block;
 }
 
+ /* Encompassed by above */
 .remove-btn {
    background-color: #D9661F;
     color: #ddd;
@@ -272,10 +313,12 @@ h4 {
     width: 100px;
 }
 
+ /* Encompassed by above */
 .remove-btn:hover {
    color: #461F1F;
 }
 
+/* Formatting for clear cart button */
 .clear-cart {
    background-color: #D9661F;
     color: #ddd;
@@ -291,6 +334,7 @@ h4 {
     margin-left: 7%;
 }
 
+ /* Encompassed by above */
 .clear-cart:hover {
    color: #461F1F;
 }

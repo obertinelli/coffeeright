@@ -3,45 +3,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>CoffeeRight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets page to device width -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Links page to CSS sheet -->
+    <title>CoffeeRight</title> <!-- page title -->
 </head>
 <body>
     <nav>
-        <a href="{% url 'home' %}"><img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="logo"></a>
-        <a href="{% url 'home' %}">Menu</a>
-        <a href="{% url 'about' %}" class="active">About Us</a>
-        <a href="{% url 'cart' %}">Shopping Cart</a>
+        <a href="{% url 'home' %}"> <!-- Div for top navigation menu, shows all buttons and highlights active tab -->
+            <img class="navimg" src="{% static 'images/CoffeeRight Logo.png' %}" alt="logo"> <!-- shows logo in navbar -->
+        </a>
+        <a href="{% url 'home' %}">Menu</a> <!-- nav choice -->
+        <a href="{% url 'about' %}" class="active">About Us</a> <!-- sets about us selection to active as that's the current page -->
+        <a href="{% url 'cart' %}">Shopping Cart</a> <!-- nav choice -->
     </nav>
 
-<div class="homeimage">
+<div class="homeimage"> <!-- div allows for the coffee bean image to be displayed in CSS -->
+
 </div>
 
-    <div class="welcometxt">About Us!</div>
+    <div class="welcometxt">About Us!</div> <!-- Text header -->
 
-    <ul class="marker">
-        <li class="box">||||||||||||||||||||||||||||||||</li>
-        <li>An Introduction</li>
+    <ul class="marker"> <!-- aesthetic orange subcategory header -->
+        <li class="box">||||||||||||||||||||||||||||||||</li> <!-- orange box text -->
+        <li>An Introduction</li> <!-- subheader text -->
     </ul>
 
-    <div class="headertxt">Who We Are</div>
-    <div class="placeText">Placeholder text for the CoffeeRight company to enter information about their company and past.</div>
+    <div class="headertxt">Who We Are</div> <!-- Text header -->
+    <div class="placeText">Placeholder text for the CoffeeRight company to enter information about their company and past.</div> <!-- placeholder text -->
 
     <hr>
 
-    <ul class="marker">
-        <li class="box">||||||||||||||||||||||||||||||||</li>
-        <li>CoffeeRight's Goal</li>
+    <ul class="marker"> <!-- aesthetic orange subcategory header -->
+        <li class="box">||||||||||||||||||||||||||||||||</li> <!-- orange box text -->
+        <li>CoffeeRight's Goal</li> <!-- subheader text -->
     </ul>
 
-    <div class="headertxt">Our Mission</div>
-    <div class="placeText">Placeholder text for the CoffeeRight company to enter information about their mission and goals as a company.</div>
+    <div class="headertxt">Our Mission</div> <!-- Text header -->
+    <div class="placeText">Placeholder text for the CoffeeRight company to enter information about their mission and goals as a company.</div> <!-- placeholder text -->
 
     <br><br><br>
 
 
-    <footer>
+    <footer> <!-- bottom page contact info banner -->
         <h3>Contact Us:</h3>
         <p><i>Email: CoffeeRight@example.com</i></p>
         <p><b>555-555-5555</b></p>
