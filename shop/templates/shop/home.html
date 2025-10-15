@@ -44,42 +44,45 @@
 
 <div class="headertxt">Best Sellers:</div> <!-- text header -->
 
-<div class="menuitems">
-    <div class="inlineitems">
-        <div class="container">
-            <div class="header"><h2>Coffee Cake</h2></div>
-            <div class="menu">
-                <img src="{% static 'images/coffeeCake.png' %}" alt="Coffee Cake" class="foodimg1">
-            </div>
-            <div class="price">
-                <h4>Price: $5.99</h4>
+<div class="menuitems"> <!-- div for menu items to appear -->
+    <div class="inlineitems"> <!-- div to format items -->
 
+        <div class="container"> <!-- contains individual item for formatting -->
+            <div class="header"><h2>Coffee Cake</h2></div> <!-- item name -->
+            <div class="menu"> <!--div for formatting image placement  -->
+                <img src="{% static 'images/coffeeCake.png' %}" alt="Coffee Cake" class="foodimg1"> <!-- shows item image -->
             </div>
-        </div>
-
-        <div class="container">
-            <div class="header"><h2>Bacon Egg & Cheese Bagel</h2></div>
-            <div class="menu">
-                <img src="{% static 'images/becbagel.png' %}" alt="Bacon Egg & Cheese Bagel" class="foodimg1">
-            </div>
-            <div class="price">
-                <h4>Price: $7.99</h4>
-
+            <div class="price"> <!-- div for price and add to cart button formatting -->
+                <h4>Price: $5.99</h4> <!-- price text -->
+                <button class="show_btn" onclick="location.href='{% url 'food' %}'">Show Me!</button> <!-- button takes you to item's menu page -->
             </div>
         </div>
 
-        <div class="container">
-            <div class="header"><h2>Mocha Latte</h2></div>
-            <div class="menu">
-                <img src="{% static 'images/mochaLatte.png' %}" alt="Mocha Latte" class="foodimg1">
+        <div class="container"> <!-- contains individual item for formatting -->
+            <div class="header"><h2>Bacon Egg & Cheese Bagel</h2></div> <!-- item name -->
+            <div class="menu"> <!--div for formatting image placement  -->
+                <img src="{% static 'images/becbagel.png' %}" alt="Bacon Egg & Cheese Bagel" class="foodimg1"> <!-- shows item image -->
             </div>
-            <div class="price">
-                <h4>Price: $4.99</h4>
+            <div class="price"> <!-- div for price and add to cart button formatting -->
+                <h4>Price: $7.99</h4> <!-- price text -->
+                <button class="show_btn" onclick="location.href='{% url 'food' %}'">Show Me!</button> <!-- button takes you to item's menu page -->
+            </div>
+        </div>
 
+        <div class="container"> <!-- contains individual item for formatting -->
+            <div class="header"><h2>Mocha Latte</h2></div> <!-- item name -->
+            <div class="menu"> <!--div for formatting image placement  -->
+                <img src="{% static 'images/mochaLatte.png' %}" alt="Mocha Latte" class="foodimg1"> <!-- shows item image -->
+            </div>
+            <div class="price"> <!-- div for price and add to cart button formatting -->
+                <h4>Price: $4.99</h4> <!-- price text -->
+                <button class="show_btn" onclick="location.href='{% url 'hot_drinks' %}'">Show Me!</button> <!-- button takes you to item's menu page -->
             </div>
         </div>
     </div>
 </div>
+
+ <br><br>
 
 <footer> <!-- bottom page contact info banner -->
     <h3>Contact Us:</h3>
