@@ -31,9 +31,9 @@ Built using Python, Django, JavaScript, and HTML/CSS.
 ## Project Structure
 
 coffeeright-ordering-system/\
-├── coffeeright/          # Main Django app\
-├── static/               # CSS, JS, and images\
-├── templates/            # HTML pages\
+├── coffeeright/  \
+├── static/       \
+├── templates/      \
 ├── manage.py\
 ├── requirements.txt\
 └── README.md
