@@ -42,7 +42,7 @@ coffeeright-ordering-system/\
 
 ##  Setup Instructions
 
-Follow these steps to run the project in a local environment:
+Follow these steps in GitBash, Command Prompt, or PowerShell to run the project in a local environment:
 
 ### 1. Clone the Repository
 ```bash
