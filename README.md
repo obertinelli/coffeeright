@@ -25,7 +25,7 @@ Built using Python, Django, JavaScript, and HTML/CSS.
 
 - **Backend:** Python, Django  
 - **Frontend:** HTML, CSS, JavaScript  
-- **Database:** SQLite (default Django configuration)  
+- **Database:** Django
 
 ---
 ## Project Structure
@@ -46,7 +46,7 @@ Follow these steps in GitBash, Command Prompt, or PowerShell to run the project 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/coffeeright-ordering-system.git
+git clone https://github.com/obertinelli/coffeeright-ordering-system.git
 cd coffeeright-ordering-system
 ```
 
