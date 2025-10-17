@@ -46,7 +46,7 @@ Follow these steps in GitBash, Command Prompt, or PowerShell to run the project 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/obertinelli/coffeeright-ordering-system.git
+git clone https://github.com/obertinelli/coffeeright.git
 cd coffeeright-ordering-system
 ```
 
